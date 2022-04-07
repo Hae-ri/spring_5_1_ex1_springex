@@ -3,40 +3,40 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean id="student" class="com.javatest.ex.Student">
-	<constructor-arg>
-		<value>홍길동</value>
-	</constructor-arg>
-	<constructor-arg>	
-		<value>25</value>
-	</constructor-arg>
-	<constructor-arg>
-		<value>3</value>
-	</constructor-arg>
-	<constructor-arg>
-		<value>7</value>
-	</constructor-arg>
-</bean>
-
-<bean id="student2" class="com.javatest.ex.Student">
-	<constructor-arg>
-		<value>김유신</value>
-	</constructor-arg>
-	<constructor-arg>	
-		<value>45</value>
-	</constructor-arg>
-	<constructor-arg>
-		<value>3</value>
-	</constructor-arg>
-	<constructor-arg>
-		<value>8</value>
-	</constructor-arg>
-</bean>
-
-<bean id="StudentInfo" class="com.javatest.ex.StudentInfo"> <!-- StudentInfo 객체는 student 객체(홍길동)에 생성자를 이용해서 의존해서 주입  -->
-	<constructor-arg>
-		<ref bean="student"/>
-	</constructor-arg>
-</bean>
+	<bean id="student" class="com.javatest.ex.Student">
+		<constructor-arg>
+			<value>홍길동</value>
+		</constructor-arg>
+		<constructor-arg>	
+			<value>25</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>3</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>7</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="student2" class="com.javatest.ex.Student">
+		<constructor-arg>
+			<value>김유신</value>
+		</constructor-arg>
+		<constructor-arg>	
+			<value>45</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>3</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>8</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="StudentInfo" class="com.javatest.ex.StudentInfo"> <!-- StudentInfo 객체는 student 객체(홍길동)에 생성자를 이용해서 의존해서 주입  -->
+		<constructor-arg>
+			<ref bean="student"/>
+		</constructor-arg>
+	</bean>
 
 </beans>
